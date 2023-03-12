@@ -1,0 +1,10 @@
+C:\Users\oskar\source\repos\yHighlights\yHighlights\obj\Debug\yHighlights.csproj.AssemblyReference.cache
+C:\Users\oskar\source\repos\yHighlights\yHighlights\obj\Debug\yHighlights.csproj.SuggestedBindingRedirects.cache
+C:\Users\oskar\source\repos\yHighlights\yHighlights\obj\Debug\yHighlights.csproj.CoreCompileInputs.cache
+C:\Users\oskar\source\repos\yHighlights\yHighlights\bin\Debug\yHighlights.exe.config
+C:\Users\oskar\source\repos\yHighlights\yHighlights\bin\Debug\yHighlights.exe
+C:\Users\oskar\source\repos\yHighlights\yHighlights\bin\Debug\yHighlights.pdb
+C:\Users\oskar\source\repos\yHighlights\yHighlights\bin\Debug\DemoInfo.dll
+C:\Users\oskar\source\repos\yHighlights\yHighlights\obj\Debug\yHighlights.csproj.CopyComplete
+C:\Users\oskar\source\repos\yHighlights\yHighlights\obj\Debug\yHighlights.exe
+C:\Users\oskar\source\repos\yHighlights\yHighlights\obj\Debug\yHighlights.pdb
