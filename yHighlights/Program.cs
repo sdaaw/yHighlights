@@ -135,10 +135,15 @@ internal class Program
 
     private static void CurrentDemo_PlayerBuy(object sender, PlayerBuyEventArgs e)
     {
-        if (isGameLive && e.Player.Money > 1000) return; //basically check for pistol round
+        if (e.Player.Money < 1000 && !isGameLive)
+        {
+            isGameLive = true;
+        } else
+        {
+            return; //basically check for pistol round
+        }
 
         //Console.WriteLine("GAME OFFICAL START");
-        isGameLive = true;
         yPlayer p;
 
         for (int i = 0; i < currentDemo.Participants.Count(); i++)
@@ -162,6 +167,7 @@ internal class Program
 
     private static void CurrentDemo_PlayerKilled(object sender, PlayerKilledEventArgs e)
     {
+        if (currentGameRoundNumber == 0) return;
         if (e.Weapon.Weapon == EquipmentElement.Bomb || e.Weapon.Weapon == EquipmentElement.Unknown) return;
         if (e.Killer == null || e.Victim == null) return;
 
