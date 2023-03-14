@@ -157,6 +157,7 @@ internal class Program
     private static void CurrentDemo_PlayerKilled(object sender, PlayerKilledEventArgs e)
     {
         if (currentGameRoundNumber == 0) return;
+        if (e.Killer.Team == e.Victim.Team) return;
         if (e.Weapon.Weapon == EquipmentElement.Bomb || e.Weapon.Weapon == EquipmentElement.Unknown) return;
         if (e.Killer == null || e.Victim == null) return;
 
