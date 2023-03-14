@@ -26,23 +26,12 @@ internal class Program
     static void Main(string[] args)
     {
         demos = GetAllDemoFiles();
-        Init();
+        ParseHeader();
     }
 
-    public static void Init()
-    {
-        for (int i = 0; i < demos.Count; i++)
-        {
-            FileStream fs = File.Open(demos[i], FileMode.Open);
-            currentDemo = new DemoParser(fs);
-            fs.Close();
-            ParseHeader(i);
-        }
-    }
 
-    public static void ParseHeader(int idx)
+    public static void ParseHeader()
     {
-        currentDemo.ParseHeader();
 
         for (int i = 0; i < demos.Count; i++)
         {
