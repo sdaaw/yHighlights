@@ -55,7 +55,6 @@ internal class Program
                 highlightList.Add(h);
             }
         }
-
         List<Highlight> bestHighlights = highlightList.OrderByDescending(o => o.HighlightEvaluation).ToList();
 
         for(int i = 0; i < 5; i++)

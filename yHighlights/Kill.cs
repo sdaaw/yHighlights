@@ -36,6 +36,11 @@ internal class Kill
 
 
     private const float DIST_THRESHOLD = 1500f;
+    private const float BASE_KILL_SCORE = 1f;
+    private const float NOSCOPE_BONUS = 1f;
+    private const float DISTANCE_BONUS = 0.5f;
+    private const float SMOKE_KILL_BONUS = 0.25f;
+    private const float HEADSHOT_BONUS = 0.5f;
 
     public Kill(KillInfo killData)
     {
@@ -53,13 +58,13 @@ internal class Kill
 
     public float Evaluate()
     {
-        float eval = 1f; //base kill 1
-        if(IsNoscope)
+        float eval = BASE_KILL_SCORE;
+        if (IsNoscope)
         {
-            eval += 1;
+            eval += NOSCOPE_BONUS;
             if(Distance > DIST_THRESHOLD)
             {
-                eval += 1.5f;
+                eval += NOSCOPE_BONUS + DISTANCE_BONUS;
             }
         }
         if(Distance > DIST_THRESHOLD)
@@ -68,14 +73,14 @@ internal class Kill
         }
         if(IsSmokeKill)
         {
-            eval += 0.25f;
+            eval += SMOKE_KILL_BONUS;
         }
         if(IsHeadshot)
         {
-            eval += 0.5f;
+            eval += HEADSHOT_BONUS;
             if(Distance > DIST_THRESHOLD)
             {
-                eval += 0.5f;
+                eval += HEADSHOT_BONUS;
             }
         }
 
